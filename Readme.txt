@@ -1,0 +1,3 @@
+app是web服务源码
+contracts是智能合约源码
+简单的测试是在truffle console上做的
