@@ -1,0 +1,39 @@
+{
+  "name": "express-demo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bootstrap-fileinput": "^5.0.4",
+    "chinese-random-name": "^1.0.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^2.6.1",
+    "ethereumjs-account": "^3.0.0",
+    "ethereumjs-tx": "^2.1.0",
+    "express": "~4.16.1",
+    "express-session": "^1.16.2",
+    "ganache-cli": "^6.7.0",
+    "http-errors": "~1.6.3",
+    "ipfs-http-client": "^33.1.1",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.2",
+    "mysql2": "^1.6.5",
+    "session": "^0.1.0",
+    "solc": "^0.6.0",
+    "tcp": "^1.0.0",
+    "vnt": "git+https://github.com/vntchain/vnt.js.git",
+    "vnt-kit": "git+https://github.com/vntchain/vnt-kit.js.git",
+    "web3": "^0.20.2"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.0.0-beta",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-nodemon": "^2.4.2",
+    "popper.js": "^1.15.0"
+  }
+}

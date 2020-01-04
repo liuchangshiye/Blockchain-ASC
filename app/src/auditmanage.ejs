@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>auditmanage | Klorofil - Free Bootstrap Dashboard Template</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,
+      user-scalable=0" />
+  <!-- VENDOR CSS -->
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="assets/vendor/linearicons/style.css" />
+  <link rel="stylesheet" href="assets/vendor/chartist/css/chartist-custom.css" />
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+  <link rel="stylesheet" href="assets/css/demo.css" />
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet" />
+  <!-- ICONS -->
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png" />
+</head>
+
+<body>
+  <!-- WRAPPER -->
+  <div id="wrapper">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="brand">
+        <a href="/index"><img src="assets/img/vntlogo.png" alt="vnt Logo" class="img-responsive logo" width="99"
+            height="99" /></a>
+      </div>
+      <div class="container-fluid">
+        <div class="navbar-btn">
+          <button type="button" class="btn-toggle-fullwidth">
+            <i class="lnr lnr-arrow-left-circle"></i>
+          </button>
+        </div>
+        <div id="navbar-menu">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-question-circle"></i>
+                <span>Help</span>
+              </a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span>Samuel</span>
+                <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/index"><i class="lnr lnr-exit"></i> <span>Logout</span></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END NAVBAR -->
+    <!-- LEFT SIDEBAR -->
+    <div id="sidebar-nav" class="sidebar">
+      <div class="sidebar-scroll">
+        <nav>
+          <ul class="nav">
+            <li>
+              <a href="/profileauditor" class=""><i class="lnr lnr-home"></i> <span>Profile-Auditor</span></a>
+            </li>
+            <li>
+              <a href="/auditmanage" class="active"><i class="lnr lnr-layers"></i> <span>Audit Manage</span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- END LEFT SIDEBAR -->
+    <!-- MAIN -->
+    <div class="main">
+      <!-- /container -->
+      <div class="main-content">
+        <!-- MAIN CONTENT -->
+        <div class="container-fluid">
+          <h3 class="page-title">Audit Manage</h3>
+          <div class="panel">
+            <div class="panel-heading">
+              <h3 class="panel-title">Audit Tasks - Todo</h3>
+            </div>
+            <!-- TABBED CONTENT -->
+            <div class="custom-tabs-line tabs-line-bottom left-aligned">
+              <ul class="nav" role="tablist">
+                <!-- <li class="active">
+                  <a href="#tab-bottom-left2" role="tab" data-toggle="tab"
+                    >Recent Activity</a
+                  >
+                </li> -->
+                <li class="active">
+                  <a href="#tab-bottom-left1" role="tab" data-toggle="tab">Projects</a>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content">
+              <div class="tab-pane fade in active" id="tab-bottom-left1">
+                <div class="table-responsive">
+                  <table class="table project-table">
+                    <thead>
+                      <tr>
+                        <th>File Order No.</th>
+                        <th>Progress</th>
+                        <th>Audit</th>
+                        <th>Audit Records</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <a href="#" id="orderno0" data-toggle="modal" data-target="#tips0">111</a>
+                        </td>
+                        <!-- 模态框（Modal） -->
+                        <div class="modal fade" id="tips0" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                          aria-hidden="true">
+                          <div class="modal-dialog" style="width:800px">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                  ×
+                                </button>
+                                <h4 class="modal-title">
+                                  The file's hash number is:
+                                </h4>
+                                <h4 class="modal-title" id="hash_num_display0">
+                                  The file's hash number is:
+                                </h4>
+                                <h4 class="modal-title">
+                                  Plese input the URL to get the file.
+                                </h4>
+                                <h4 class="modal-title">
+                                  URL: http://localhost:8080/ipfs/(file hash)
+                                </h4>
+                                <h4 class="modal-title">
+                                  {eg.
+                                  http://localhost:8080/ipfs/12345678901234567890123456789012345678901234567}
+                                </h4>
+                              </div>
+                            </div>
+                            <!-- /.modal-content -->
+                          </div>
+                          <!-- /.modal-dialog -->
+                        </div>
+                        <!-- /.modal -->
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                              aria-valuemax="100" style="width: 75%;" id="progress_using">
+                              75%
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+                            Audit
+                          </button>
+
+                          <!-- 模态框（Modal） -->
+                          <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+                            aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                    ×
+                                  </button>
+                                  <h4 class="modal-title" id="myModalLabel">
+                                    Audit Report
+                                  </h4>
+                                  <!-- BORDERED TABLE -->
+                                  <div class="panel">
+                                    <div class="panel-heading">
+                                      <h3 class="panel-title">
+                                        Audit List
+                                      </h3>
+                                    </div>
+                                    <div class="panel-body">
+                                      <table class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <!-- <th>#</th> -->
+                                            <th>Order</th>
+                                            <th>Audit Type</th>
+                                            <th>Audit items</th>
+                                            <th width="130">Audit Result</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>Overflow Audit</td>
+                                            <td>-</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <label class="fancy-radio">
+                                                <input id="result1" name="result1" value="1" type="radio" />
+                                                <span><i></i>pass</span>
+                                              </label>
+                                              <label class="fancy-radio">
+                                                <input id="result1" name="result1" value="0" type="radio" />
+
+                                                <span><i></i>no pass</span>
+                                              </label>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>2</td>
+                                            <td>
+                                              Conditions of Competition Audit
+                                            </td>
+                                            <td>-</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <label class="fancy-radio">
+                                                <input id="result2" name="result2" value="1" type="radio" />
+                                                <span><i></i>pass</span>
+                                              </label>
+                                              <label class="fancy-radio">
+                                                <input id="result2" name="result2" value="0" type="radio" />
+
+                                                <span><i></i>no pass</span>
+                                              </label>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td rowspan="2">3</td>
+                                            <td rowspan="2">
+                                              Right Control Audit
+                                            </td>
+                                            <td>
+                                              Previlege Vulnerability Audit
+                                            </td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <label class="fancy-radio">
+                                                <input id="result3" name="result3" value="1" type="radio" />
+                                                <span><i></i>pass</span>
+                                              </label>
+                                              <label class="fancy-radio">
+                                                <input id="result3" name="result3" value="0" type="radio" />
+
+                                                <span><i></i>no pass</span>
+                                              </label>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Excessive Previlege Audit</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <label class="fancy-radio">
+                                                <input id="result4" name="result4" value="1" type="radio" />
+                                                <span><i></i>pass</span>
+                                              </label>
+                                              <label class="fancy-radio">
+                                                <input id="result4" name="result4" value="0" type="radio" />
+
+                                                <span><i></i>no pass</span>
+                                              </label>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td rowspan="7">4</td>
+                                            <td rowspan="7">
+                                              Safety Design Audit
+                                            </td>
+                                            <td>Zeppelin Module Security</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <label class="fancy-radio">
+                                                <input id="result5" name="result5" value="1" type="radio" />
+                                                <span><i></i>pass</span>
+                                              </label>
+                                              <label class="fancy-radio">
+                                                <input id="result5" name="result5" value="0" type="radio" />
+
+                                                <span><i></i>no pass</span>
+                                              </label>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Compiler Version Security</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <label class="fancy-radio">
+                                                <input id="result6" name="result6" value="1" type="radio" />
+                                                <span><i></i>pass</span>
+                                              </label>
+                                              <label class="fancy-radio">
+                                                <input id="result6" name="result6" value="0" type="radio" />
+
+                                                <span><i></i>no pass</span>
+                                              </label>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              Hard-coded Address Security
+                                            </td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <label class="fancy-radio">
+                                                <input id="result7" name="result7" value="1" type="radio" />
+                                                <span><i></i>pass</span>
+                                              </label>
+                                              <label class="fancy-radio">
+                                                <input id="result7" name="result7" value="0" type="radio" />
+
+                                                <span><i></i>no pass</span>
+                                              </label>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              Fallback Function Security
+                                            </td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <label class="fancy-radio">
+                                                <input id="result8" name="result8" value="1" type="radio" />
+                                                <span><i></i>pass</span>
+                                              </label>
+                                              <label class="fancy-radio">
+                                                <input id="result8" name="result8" value="0" type="radio" />
+
+                                                <span><i></i>no pass</span>
+                                              </label>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Explicit Coding Security</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <label class="fancy-radio">
+                                                <input id="result9" name="result9" value="1" type="radio" />
+                                                <span><i></i>pass</span>
+                                              </label>
+                                              <label class="fancy-radio">
+                                                <input id="result9" name="result9" value="0" type="radio" />
+
+                                                <span><i></i>no pass</span>
+                                              </label>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              Function Return Value Security
+                                            </td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <label class="fancy-radio">
+                                                <input id="result10" name="result10" value="1" type="radio" />
+                                                <span><i></i>pass</span>
+                                              </label>
+                                              <label class="fancy-radio">
+                                                <input id="result10" name="result10" value="0" type="radio" />
+
+                                                <span><i></i>no pass</span>
+                                              </label>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Call Security</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <label class="fancy-radio">
+                                                <input id="result11" name="result11" value="1" type="radio" />
+                                                <span><i></i>pass</span>
+                                              </label>
+                                              <label class="fancy-radio">
+                                                <input id="result11" name="result11" value="0" type="radio" />
+
+                                                <span><i></i>no pass</span>
+                                              </label>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>5</td>
+                                            <td>DoS Audit</td>
+                                            <td>-</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <label class="fancy-radio">
+                                                <input id="result12" name="result12" value="1" type="radio" />
+                                                <span><i></i>pass</span>
+                                              </label>
+                                              <label class="fancy-radio">
+                                                <input id="result12" name="result12" value="0" type="radio" />
+
+                                                <span><i></i>no pass</span>
+                                              </label>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>6</td>
+                                            <td>Gas Optimize Audit</td>
+                                            <td>-</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <label class="fancy-radio">
+                                                <input id="result13" name="result13" value="1" type="radio" />
+                                                <span><i></i>pass</span>
+                                              </label>
+                                              <label class="fancy-radio">
+                                                <input id="result13" name="result13" value="0" type="radio" />
+
+                                                <span><i></i>no pass</span>
+                                              </label>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>7</td>
+                                            <td>Design Logic Audit</td>
+                                            <td>-</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <label class="fancy-radio">
+                                                <input id="result14" name="result14" value="1" type="radio" />
+                                                <span><i></i>pass</span>
+                                              </label>
+                                              <label class="fancy-radio">
+                                                <input id="result14" name="result14" value="0" type="radio" />
+
+                                                <span><i></i>no pass</span>
+                                              </label>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>8</td>
+                                            <td>Malicious Event Log Audit</td>
+                                            <td>-</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <label class="fancy-radio">
+                                                <input id="result15" name="result15" value="1" type="radio" />
+                                                <span><i></i>pass</span>
+                                              </label>
+                                              <label class="fancy-radio">
+                                                <input id="result15" name="result15" value="0" type="radio" />
+
+                                                <span><i></i>no pass</span>
+                                              </label>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>9</td>
+                                            <td>
+                                              Uninitialized Storage Audit
+                                            </td>
+                                            <td>-</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <label class="fancy-radio">
+                                                <input id="result16" name="result16" value="1" type="radio" />
+                                                <span><i></i>pass</span>
+                                              </label>
+                                              <label class="fancy-radio">
+                                                <input id="result16" name="result16" value="0" type="radio" />
+
+                                                <span><i></i>no pass</span>
+                                              </label>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>10</td>
+                                            <td>Arithmetic Error Audit</td>
+                                            <td>-</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <label class="fancy-radio">
+                                                <input id="result17" name="result17" value="1" type="radio" />
+                                                <span><i></i>pass</span>
+                                              </label>
+                                              <label class="fancy-radio">
+                                                <input id="result17" name="result17" value="0" type="radio" />
+
+                                                <span><i></i>no pass</span>
+                                              </label>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                  <!-- END BORDERED TABLE -->
+                                </div>
+                                <div class="modal-container"></div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">
+                                    关闭
+                                  </button>
+                                  <button id="upload_report" type="button" class="btn btn-primary">
+                                    提交更改
+                                  </button>
+                                </div>
+                              </div>
+                              <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                          </div>
+                          <!-- /.modal -->
+                        </td>
+                        <td>
+                          <button id="last_report" type="button" class="btn btn-info" data-toggle="modal"
+                            data-target="#myModal222">
+                            last record
+                          </button>
+                          <!-- 模态框（Modal） -->
+                          <div class="modal fade" id="myModal222" tabindex="-1" role="dialog"
+                            aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                    ×
+                                  </button>
+                                  <h4 class="modal-title" id="myModalLabel">
+                                    Audit Report
+                                  </h4>
+                                  <!-- BORDERED TABLE -->
+                                  <div class="panel">
+                                    <div class="panel-heading">
+                                      <h3 class="panel-title">
+                                        Audit List
+                                      </h3>
+                                    </div>
+                                    <div class="panel-body">
+                                      <table class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <!-- <th>#</th> -->
+                                            <th>Order</th>
+                                            <th width="200">Audit Type</th>
+                                            <th>Audit items</th>
+                                            <th>Audit Result</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>Overflow Audit</td>
+                                            <td>-</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <span id="label1" class="label label-success">pass</span>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>2</td>
+                                            <td>
+                                              Conditions of Competition Audit
+                                            </td>
+                                            <td>-</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <span id="label2" class="label label-success">pass</span>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td rowspan="2">3</td>
+                                            <td rowspan="2">
+                                              Right Control Audit
+                                            </td>
+                                            <td>
+                                              Previlege Vulnerability Audit
+                                            </td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <span id="label3" class="label label-success">pass</span>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Excessive Previlege Audit</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <span id="label4" class="label label-success">pass</span>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td rowspan="7">4</td>
+                                            <td rowspan="7">
+                                              Safety Design Audit
+                                            </td>
+                                            <td>Zeppelin Module Security</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <span id="label5" class="label label-success">pass</span>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Compiler Version Security</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <span id="label6" class="label label-success">pass</span>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              Hard-coded Address Security
+                                            </td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <span id="label7" class="label label-success">pass</span>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              Fallback Function Security
+                                            </td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <span id="label8" class="label label-success">pass</span>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Explicit Coding Security</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <span id="label9" class="label label-success">pass</span>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              Function Return Value Security
+                                            </td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <span id="label10" class="label label-success">pass</span>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Call Security</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <span id="label11" class="label label-success">pass</span>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>5</td>
+                                            <td>DoS Audit</td>
+                                            <td>-</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <span id="label12" class="label label-success">pass</span>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>6</td>
+                                            <td>Gas Optimize Audit</td>
+                                            <td>-</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <span id="label13" class="label label-success">pass</span>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>7</td>
+                                            <td>Design Logic Audit</td>
+                                            <td>-</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <span id="label14" class="label label-success">pass</span>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>8</td>
+                                            <td>Malicious Event Log Audit</td>
+                                            <td>-</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <span id="label15" class="label label-success">pass</span>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>9</td>
+                                            <td>
+                                              Uninitialized Storage Audit
+                                            </td>
+                                            <td>-</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <span id="label16" class="label label-success">pass</span>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>10</td>
+                                            <td>Arithmetic Error Audit</td>
+                                            <td>-</td>
+                                            <!-- <td>pass</td> -->
+                                            <td>
+                                              <span id="label17" class="label label-success">pass</span>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                  <!-- END BORDERED TABLE -->
+                                </div>
+                              </div>
+                              <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                          </div>
+                          <!-- /.modal -->
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- END TABBED CONTENT -->
+          </div>
+        </div>
+        <!-- ALL REPORTS -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Resent Audit Reports</h3>
+          </div>
+
+          <div class="panel-body no-padding">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>File Order No.</th>
+                  <th>Audit Results</th>
+                  <th>Audit Report</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <a href="#" id="orderno2" data-toggle="modal" data-target="#tips2">2222</a>
+                  </td>
+                  <!-- 模态框（Modal） -->
+                  <div class="modal fade" id="tips2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" style="width:800px">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            ×
+                          </button>
+                          <h4 class="modal-title">
+                            The file's hash number is:
+                          </h4>
+                          <h4 class="modal-title" id="hash_num_display2">
+                            The file's hash number is:
+                          </h4>
+                          <h4 class="modal-title">
+                            Plese input the URL to get the file.
+                          </h4>
+                          <h4 class="modal-title">
+                            URL: http://localhost:8080/ipfs/(file hash)
+                          </h4>
+                          <h4 class="modal-title">
+                            {eg.
+                            http://localhost:8080/ipfs/12345678901234567890123456789012345678901234567}
+                          </h4>
+                        </div>
+                      </div>
+                      <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                  </div>
+                  <!-- /.modal -->
+                  <td>
+                    <span id="result_label" class="label label-success">COMPLETED</span>
+                  </td>
+                  <td>
+                    <button id="check_report2" type="button" class="btn btn-default" data-toggle="modal"
+                      data-target="#myModal2">
+                      Check Report
+                    </button>
+                    <!-- 模态框（Modal） -->
+                    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                      aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                              ×
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">
+                              Audit Report
+                            </h4>
+                            <!-- BORDERED TABLE -->
+                            <div class="panel">
+                              <div class="panel-heading">
+                                <h3 class="panel-title">
+                                  Audit List
+                                </h3>
+                              </div>
+                              <div class="panel-body">
+                                <table class="table table-bordered">
+                                  <thead>
+                                    <tr>
+                                      <!-- <th>#</th> -->
+                                      <th>Order</th>
+                                      <th width="200">Audit Type</th>
+                                      <th>Audit items</th>
+                                      <th>Audit Result</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>Overflow Audit</td>
+                                      <td>-</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label111" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>2</td>
+                                      <td>
+                                        Conditions of Competition Audit
+                                      </td>
+                                      <td>-</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label112" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td rowspan="2">3</td>
+                                      <td rowspan="2">
+                                        Right Control Audit
+                                      </td>
+                                      <td>Previlege Vulnerability Audit</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label113" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Excessive Previlege Audit</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label114" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td rowspan="7">4</td>
+                                      <td rowspan="7">
+                                        Safety Design Audit
+                                      </td>
+                                      <td>Zeppelin Module Security</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label115" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Compiler Version Security</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label116" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Hard-coded Address Security</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label117" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Fallback Function Security</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label118" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Explicit Coding Security</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label119" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        Function Return Value Security
+                                      </td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label1110" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Call Security</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label1111" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>5</td>
+                                      <td>DoS Audit</td>
+                                      <td>-</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label1112" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>6</td>
+                                      <td>Gas Optimize Audit</td>
+                                      <td>-</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label1113" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>7</td>
+                                      <td>Design Logic Audit</td>
+                                      <td>-</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label1114" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>8</td>
+                                      <td>Malicious Event Log Audit</td>
+                                      <td>-</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label1115" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>9</td>
+                                      <td>Uninitialized Storage Audit</td>
+                                      <td>-</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label1116" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>10</td>
+                                      <td>Arithmetic Error Audit</td>
+                                      <td>-</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label1117" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <!-- END BORDERED TABLE -->
+                          </div>
+                        </div>
+                        <!-- /.modal-content -->
+                      </div>
+                      <!-- /.modal-dialog -->
+                    </div>
+                    <!-- /.modal -->
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>
+                    <a href="#" id="orderno3" data-toggle="modal" data-target="#tips3">33333</a>
+                  </td>
+                  <!-- 模态框（Modal） -->
+                  <div class="modal fade" id="tips3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" style="width:800px">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            ×
+                          </button>
+                          <h4 class="modal-title">
+                            The file's hash number is:
+                          </h4>
+                          <h4 class="modal-title" id="hash_num_display3">
+                            The file's hash number is:
+                          </h4>
+                          <h4 class="modal-title">
+                            Plese input the URL to get the file.
+                          </h4>
+                          <h4 class="modal-title">
+                            URL: http://localhost:8080/ipfs/(file hash)
+                          </h4>
+                          <h4 class="modal-title">
+                            {eg.
+                            http://localhost:8080/ipfs/12345678901234567890123456789012345678901234567}
+                          </h4>
+                        </div>
+                      </div>
+                      <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                  </div>
+                  <!-- /.modal -->
+                  <td>
+                    <span id="result_label3" class="label label-success">COMPLETED</span>
+                  </td>
+                  <td>
+                    <button id="check_report3" type="button" class="btn btn-default" data-toggle="modal"
+                      data-target="#myModal3">
+                      Check Report
+                    </button>
+                    <!-- 模态框（Modal） -->
+                    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3"
+                      aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                              ×
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel3">
+                              Audit Report
+                            </h4>
+                            <!-- BORDERED TABLE -->
+                            <div class="panel">
+                              <div class="panel-heading">
+                                <h3 class="panel-title">
+                                  Audit List
+                                </h3>
+                              </div>
+                              <div class="panel-body">
+                                <table class="table table-bordered">
+                                  <thead>
+                                    <tr>
+                                      <!-- <th>#</th> -->
+                                      <th>Order</th>
+                                      <th width="200">Audit Type</th>
+                                      <th>Audit items</th>
+                                      <th>Audit Result</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>Overflow Audit</td>
+                                      <td>-</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label2111" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>2</td>
+                                      <td>
+                                        Conditions of Competition Audit
+                                      </td>
+                                      <td>-</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label2112" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td rowspan="2">3</td>
+                                      <td rowspan="2">
+                                        Right Control Audit
+                                      </td>
+                                      <td>Previlege Vulnerability Audit</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label2113" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Excessive Previlege Audit</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label2114" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td rowspan="7">4</td>
+                                      <td rowspan="7">
+                                        Safety Design Audit
+                                      </td>
+                                      <td>Zeppelin Module Security</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label2115" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Compiler Version Security</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label2116" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Hard-coded Address Security</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label2117" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Fallback Function Security</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label2118" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Explicit Coding Security</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label2119" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        Function Return Value Security
+                                      </td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label21110" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Call Security</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label21111" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>5</td>
+                                      <td>DoS Audit</td>
+                                      <td>-</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label21112" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>6</td>
+                                      <td>Gas Optimize Audit</td>
+                                      <td>-</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label21113" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>7</td>
+                                      <td>Design Logic Audit</td>
+                                      <td>-</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label21114" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>8</td>
+                                      <td>Malicious Event Log Audit</td>
+                                      <td>-</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label21115" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>9</td>
+                                      <td>Uninitialized Storage Audit</td>
+                                      <td>-</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label21116" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>10</td>
+                                      <td>Arithmetic Error Audit</td>
+                                      <td>-</td>
+                                      <!-- <td>pass</td> -->
+                                      <td>
+                                        <span id="label21117" class="label label-danger">no pass</span>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <!-- END BORDERED TABLE -->
+                          </div>
+                        </div>
+                        <!-- /.modal-content -->
+                      </div>
+                      <!-- /.modal-dialog -->
+                    </div>
+                    <!-- /.modal -->
+                  </td>
+                </tr>
+              </tbody>
+
+              <tbody>
+                <tr>
+                  <td>
+                    <a href="#" id="orderno1" data-toggle="modal" data-target="#tips1">763648</a>
+                  </td>
+                  <!-- 模态框（Modal） -->
+                  <div class="modal fade" id="tips1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" style="width:800px">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            ×
+                          </button>
+                          <h4 class="modal-title">
+                            The file's hash number is:
+                          </h4>
+                          <h4 class="modal-title" id="hash_num_display1">
+                            The file's hash number is:
+                          </h4>
+                          <h4 class="modal-title">
+                            Plese input the URL to get the file.
+                          </h4>
+                          <h4 class="modal-title">
+                            URL: http://localhost:8080/ipfs/(file hash)
+                          </h4>
+                          <h4 class="modal-title">
+                            {eg.
+                            http://localhost:8080/ipfs/12345678901234567890123456789012345678901234567}
+                          </h4>
+                        </div>
+                      </div>
+                      <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                  </div>
+                  <!-- /.modal -->
+                  <td><span class="label label-warning">PENDING</span></td>
+                  <td>
+                    <button type="button" class="btn btn-primary" disabled="disabled">
+                      Report generating
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- END ALL REPORTS -->
+        <!-- END MAIN CONTENT -->
+      </div>
+    </div>
+    <!-- END MAIN -->
+  </div>
+  <!-- END WRAPPER -->
+  <!-- Javascript -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="assets/vendor/chartist/js/chartist.min.js"></script>
+  <script src="assets/scripts/klorofil-common.js"></script>
+  <!-- <script type="text/javascript"></script> -->
+  <script type="text/javascript">
+    //!AUDIT SUBMIT***************************************************************************
+    $("#upload_report").click(function () {
+      // console.log("suc");
+      // if (typeof(n1) == undefined); console.log(typeof(n1));
+      // var n1 = $("#result1").val();
+      var n1 = 2;
+      var isAutoSend1 = document.getElementsByName('result1');
+      for (var i = 0; i < isAutoSend1.length; i++) {
+        if (isAutoSend1[i].checked == true) {
+          console.log(isAutoSend1[i].checked);
+          console.log(i);
+          if (i == 0) n1 = 1;
+          else n1 = 0;
+        }
+      }
+      var n2 = 2;
+      var isAutoSend2 = document.getElementsByName('result2');
+      for (var i = 0; i < isAutoSend2.length; i++) {
+        if (isAutoSend2[i].checked == true) {
+          console.log(isAutoSend2[i].checked);
+          console.log(i);
+          if (i == 0) n2 = 1;
+          else n2 = 0;
+        }
+      }
+      var n3 = 2;
+      var isAutoSend3 = document.getElementsByName('result3');
+      for (var i = 0; i < isAutoSend3.length; i++) {
+        if (isAutoSend3[i].checked == true) {
+          console.log(isAutoSend3[i].checked);
+          console.log(i);
+          if (i == 0) n3 = 1;
+          else n3 = 0;
+        }
+      }
+      var n4 = 2;
+      var isAutoSend4 = document.getElementsByName('result4');
+      for (var i = 0; i < isAutoSend4.length; i++) {
+        if (isAutoSend4[i].checked == true) {
+          console.log(isAutoSend4[i].checked);
+          console.log(i);
+          if (i == 0) n4 = 1;
+          else n4 = 0;
+        }
+      }
+      var n5 = 2;
+      var isAutoSend5 = document.getElementsByName('result5');
+      for (var i = 0; i < isAutoSend5.length; i++) {
+        if (isAutoSend5[i].checked == true) {
+          console.log(isAutoSend5[i].checked);
+          console.log(i);
+          if (i == 0) n5 = 1;
+          else n5 = 0;
+        }
+      }
+      var n6 = 2;
+      var isAutoSend6 = document.getElementsByName('result6');
+      for (var i = 0; i < isAutoSend6.length; i++) {
+        if (isAutoSend6[i].checked == true) {
+          console.log(isAutoSend6[i].checked);
+          console.log(i);
+          if (i == 0) n6 = 1;
+          else n6 = 0;
+        }
+      }
+      var n7 = 2;
+      var isAutoSend7 = document.getElementsByName('result7');
+      for (var i = 0; i < isAutoSend7.length; i++) {
+        if (isAutoSend7[i].checked == true) {
+          console.log(isAutoSend7[i].checked);
+          console.log(i);
+          if (i == 0) n7 = 1;
+          else n7 = 0;
+        }
+      }
+      var n8 = 2;
+      var isAutoSend8 = document.getElementsByName('result8');
+      for (var i = 0; i < isAutoSend8.length; i++) {
+        if (isAutoSend8[i].checked == true) {
+          console.log(isAutoSend8[i].checked);
+          console.log(i);
+          if (i == 0) n8 = 1;
+          else n8 = 0;
+        }
+      }
+      var n9 = 2;
+      var isAutoSend9 = document.getElementsByName('result9');
+      for (var i = 0; i < isAutoSend9.length; i++) {
+        if (isAutoSend9[i].checked == true) {
+          console.log(isAutoSend9[i].checked);
+          console.log(i);
+          if (i == 0) n9 = 1;
+          else n9 = 0;
+        }
+      }
+      var n10 = 2;
+      var isAutoSend10 = document.getElementsByName('result10');
+      for (var i = 0; i < isAutoSend10.length; i++) {
+        if (isAutoSend10[i].checked == true) {
+          console.log(isAutoSend10[i].checked);
+          console.log(i);
+          if (i == 0) n10 = 1;
+          else n10 = 0;
+        }
+      }
+      var n11 = 2;
+      var isAutoSend11 = document.getElementsByName('result11');
+      for (var i = 0; i < isAutoSend11.length; i++) {
+        if (isAutoSend11[i].checked == true) {
+          console.log(isAutoSend11[i].checked);
+          console.log(i);
+          if (i == 0) n11 = 1;
+          else n11 = 0;
+        }
+      }
+      var n12 = 2;
+      var isAutoSend12 = document.getElementsByName('result12');
+      for (var i = 0; i < isAutoSend12.length; i++) {
+        if (isAutoSend12[i].checked == true) {
+          console.log(isAutoSend12[i].checked);
+          console.log(i);
+          if (i == 0) n12 = 1;
+          else n12 = 0;
+        }
+      }
+      var n13 = 2;
+      var isAutoSend13 = document.getElementsByName('result13');
+      for (var i = 0; i < isAutoSend13.length; i++) {
+        if (isAutoSend13[i].checked == true) {
+          console.log(isAutoSend13[i].checked);
+          console.log(i);
+          if (i == 0) n13 = 1;
+          else n13 = 0;
+        }
+      }
+      var n14 = 2;
+      var isAutoSend14 = document.getElementsByName('result14');
+      for (var i = 0; i < isAutoSend14.length; i++) {
+        if (isAutoSend14[i].checked == true) {
+          console.log(isAutoSend14[i].checked);
+          console.log(i);
+          if (i == 0) n14 = 1;
+          else n14 = 0;
+        }
+      }
+      var n15 = 2;
+      var isAutoSend15 = document.getElementsByName('result15');
+      for (var i = 0; i < isAutoSend15.length; i++) {
+        if (isAutoSend15[i].checked == true) {
+          console.log(isAutoSend15[i].checked);
+          console.log(i);
+          if (i == 0) n15 = 1;
+          else n15 = 0;
+        }
+      }
+      var n16 = 2;
+      var isAutoSend16 = document.getElementsByName('result16');
+      for (var i = 0; i < isAutoSend16.length; i++) {
+        if (isAutoSend16[i].checked == true) {
+          console.log(isAutoSend16[i].checked);
+          console.log(i);
+          if (i == 0) n16 = 1;
+          else n16 = 0;
+        }
+      }
+      var n17 = 2;
+      var isAutoSend17 = document.getElementsByName('result17');
+      for (var i = 0; i < isAutoSend17.length; i++) {
+        if (isAutoSend17[i].checked == true) {
+          console.log(isAutoSend17[i].checked);
+          console.log(i);
+          if (i == 0) n17 = 1;
+          else n17 = 0;
+        }
+      }
+
+      // var result_report = n1=="pass"?"1":"0" + n2=="pass"?"1":"0" + n3=="pass"?"1":"0";
+      var result_report = String(n1) + String(n2) + String(n3) + String(n4) + String(n5) + String(n6) + String(n7) + String(n8) + String(n9) + String(n10)
+        + String(n11) + String(n12) + String(n13) + String(n14) + String(n15) + String(n16) + String(n17);
+      console.log("result_report");
+      console.log(result_report);//to write.... use db to write data stream in.....
+      var flag = 1;
+      if (n1 == 2 || n2 == 2 || n3 == 2 || n4 == 2 || n5 == 2 || n6 == 2 || n7 == 2 || n8 == 2 || n9 == 2 || n10 == 2 || n11 == 2 || n12 == 2 || n13 == 2 || n14 == 2 || n15 == 2 || n16 == 2 || n17 == 2) flag = 0;
+      var res;
+      if (flag == 1) {
+        $.ajax({
+          data: {
+            res: result_report
+          },
+          url: "/result",
+          type: "POST",
+          async: false,
+          // success: function (data) {
+          // alert("Audit successful!");
+          // },
+
+          // error: function (err) {
+          // alert("请求失败!");
+          // }
+        });
+        alert("Audit successful!");
+        
+      }
+      else
+        alert("PLease fill in all blank!");
+
+    });
+    //!END SUDIT SUBMIT
+
+
+    var order_number;
+    var hash_number;
+    var progress_get;
+    var order_number2;
+    var hash_number2;
+    var result_report2;
+    var state2;
+    var order_number3;
+    var hash_number3;
+    var result_report3;
+    var state3;
+    $.ajax({
+      url: "/audit_upload1",
+      type: "POST",
+      async: false,
+      success: function (data) {
+        order_number = data['data'].ordernumber,
+          hash_number = data['data'].hash_number,
+          progress_get = data['data'].progressget,
+          order_number2 = data['data2'].order_number2,
+          hash_number2 = data['data2'].hash_number2,
+          result_report2 = data['data2'].result_report2,
+          state2 = data['data2'].state2,
+          order_number3 = data['data3'].order_number3,
+          hash_number3 = data['data3'].hash_number3,
+          result_report3 = data['data3'].result_report3,
+          state3 = data['data3'].state3
+          
+      },
+    });
+
+    // !TO DO LIST-part2***************************************************************************
+    //!CHECK REPORT RESULT 0
+    // var order_number1 = "111";
+    $("#orderno0").click(function () {
+      // var hash_number = "111111";
+      document.getElementById("hash_num_display0").innerHTML = hash_number;
+    });
+    document.getElementById("orderno0").innerHTML = order_number;
+    //!END CHECK REPORT RESULT 0
+    //!check progress
+    // var progress_get = "70%";
+    $("#" + "progress_using").attr("aria-valuenow", progress_get - "%");
+    $("#" + "progress_using").attr("style", "width: " + progress_get + "; color:rgb(0, 0, 0)");
+    document.getElementById("progress_using").innerHTML = progress_get;
+    //!end check progress
+
+    //!CHECK REPORT RESULT 1***************************************************************************
+    // var order_number1 = "111";
+    $("#orderno1").click(function () {
+      // var hash_number = "111111";
+      document.getElementById("hash_num_display1").innerHTML = hash_number;
+    });
+    document.getElementById("orderno1").innerHTML = order_number;
+    //!END CHECK REPORT RESULT 1
+
+    //CHECK REPORT RESULT 2***************************************************************************
+    // var order_number2 = "222";
+    $("#orderno2").click(function () {
+      // var hash_number = "222222";
+      document.getElementById("hash_num_display2").innerHTML = hash_number2;
+    });
+    document.getElementById("orderno2").innerHTML = order_number2;
+    $("#check_report2").click(function () {
+      // var result_report = "11101010101010111";
+      var i = 1;
+      // $("#label1").attr("class", "label label-danger");
+      // document.getElementById("label1").innerHTML = "no pass";
+      for (i = 1; i <= 17; i++) {
+        if (result_report2[i - 1] == 0) {
+          var nameofitem = "label11";
+          var nameofitemss = "#" + nameofitem + i;
+          var nameofitems = nameofitem + i;
+          console.log(nameofitemss);
+          console.log(nameofitems);
+
+          $(nameofitemss).attr("class", "label label-danger");
+          document.getElementById(nameofitems).innerHTML = "no pass";
+        } else {
+          var nameofitem = "label11";
+          var nameofitemss = "#" + nameofitem + i;
+          var nameofitems = nameofitem + i;
+          // console.log(nameofitemss);
+          // console.log(nameofitems);
+
+          $(nameofitemss).attr("class", "label label-success");
+          document.getElementById(nameofitems).innerHTML = "pass";
+        }
+      }
+      //to read.... use db to read data stream in.....
+      // console.log("result_last_report[1]");
+      // console.log(result_last_report[1]);
+    });
+    //!report result label
+    // var state = "1";
+    var state_input;
+    var state_label;
+    if (state2 == "1") {
+      state_input = "PASS";
+      state_label = "label label-success";
+    } else if (state2 == "0") {
+      state_input = "NO PASS";
+      state_label = "label label-danger";
+    } else if (state2 == "2") {
+      state_input = "DEFAULT";
+      state_label = "label label-default";
+    }
+    $("#" + "result_label").attr("class", state_label);
+    document.getElementById("result_label").innerHTML = state_input;
+    //!end report result label
+    //!END CHECK REPORT RESULT 2
+
+    //CHECK REPORT RESULT 3***************************************************************************
+    // var order_number3 = "333";
+    $("#orderno3").click(function () {
+      // var hash_number = "333333";
+      document.getElementById("hash_num_display3").innerHTML = hash_number3;
+    });
+    document.getElementById("orderno3").innerHTML = order_number3;
+    $("#check_report3").click(function () {
+      // var result_report = "11111111101010111";
+      var i = 1;
+      // $("#label1").attr("class", "label label-danger");
+      // document.getElementById("label1").innerHTML = "no pass";
+      for (i = 1; i <= 17; i++) {
+        if (result_report3[i - 1] == 0) {
+          var nameofitem = "label211";
+          var nameofitemss = "#" + nameofitem + i;
+          var nameofitems = nameofitem + i;
+          // console.log(nameofitemss);
+          // console.log(nameofitems);
+
+          $(nameofitemss).attr("class", "label label-danger");
+          document.getElementById(nameofitems).innerHTML = "no pass";
+        } else {
+          var nameofitem = "label211";
+          var nameofitemss = "#" + nameofitem + i;
+          var nameofitems = nameofitem + i;
+          // console.log(nameofitemss);
+          // console.log(nameofitems);
+
+          $(nameofitemss).attr("class", "label label-success");
+          document.getElementById(nameofitems).innerHTML = "pass";
+        }
+      }
+      //to read.... use db to read data stream in.....
+      // console.log("result_last_report[1]");
+      // console.log(result_last_report[1]);
+    });
+    //!report result label
+    // var state3 = "2";
+    var state_input3;
+    var state_label3;
+    if (state3 == "1") {
+      state_input3 = "PASS";
+      state_label3 = "label label-success";
+    } else if (state3 == "0") {
+      state_input3 = "NO PASS";
+      state_label3 = "label label-danger";
+    } else if (state3 == "2") {
+      state_input3 = "DEFAULT";
+      state_label3 = "label label-default";
+    }
+    $("#" + "result_label3").attr("class", state_label3);
+    document.getElementById("result_label3").innerHTML = state_input3;
+    //!end report result label
+    //!END CHECK REPORT RESULT 3
+
+    //!TO DO LIST-part1***************************************************************************
+    // //!CHECK REPORT RESULT 0
+    // // var order_number1 = "111";
+    // $("#orderno0").click(function () {
+    //   // var hash_number = "111111";
+    //   document.getElementById("hash_num_display0").innerHTML = hash_number;
+    // });
+    // document.getElementById("orderno0").innerHTML = order_number;
+    // //!END CHECK REPORT RESULT 0
+    // //!check progress
+    // // var progress_get = "70%";
+    // $("#" + "progress_using").attr("aria-valuenow", progress_get - "%");
+    // $("#" + "progress_using").attr("style", "width: " + progress_get);
+    // document.getElementById("progress_using").innerHTML = progress_get;
+    // //!end check progress
+
+    $("#last_report").click(function () {
+      var result_last_report;
+      $.ajax({
+        data: {
+        },
+        url: "/last_report",
+        type: "POST",
+        async: false,
+        success: function (data) {
+          result_last_report = data.item_ret;
+          console.log("here!" + result_last_report);
+        }
+      });
+      //flag=document.getElementById("flag").innerHTML;
+      var i = 1;
+      // $("#label1").attr("class", "label label-danger");
+      // document.getElementById("label1").innerHTML = "no pass";
+      for (i = 1; i <= 17; i++) {
+        if (result_last_report[i - 1] == 0) {
+          var nameofitem = "label";
+          var nameofitemss = "#" + nameofitem + i;
+          var nameofitems = nameofitem + i;
+          // console.log(nameofitemss);
+          // console.log(nameofitems);
+
+          $(nameofitemss).attr("class", "label label-danger");
+          document.getElementById(nameofitems).innerHTML = "no pass";
+        }
+        else {
+          var nameofitem = "label";
+          var nameofitemss = "#" + nameofitem + i;
+          var nameofitems = nameofitem + i;
+          // console.log(nameofitemss);
+          // console.log(nameofitems);
+
+          $(nameofitemss).attr("class", "label label-success");
+          document.getElementById(nameofitems).innerHTML = "pass";
+        }
+      }
+    });
+
+
+    //!END TO DO LIST
+
+  </script>
+</body>
+
+</html>
